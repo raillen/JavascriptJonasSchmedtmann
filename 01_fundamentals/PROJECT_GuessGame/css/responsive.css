@@ -109,8 +109,16 @@ body {
   border-radius: .5rem;
 }
 
-.win {
-  background-color: #499649 !important;
+.bg-win {
+  background-color: #499649;
+  font-size: 3rem;
+  color: #ffffff;
+}
+
+.bg-neutral {
+  background-color: #212022;
+  font-size: 3rem;
+  color: #ffffff;
 }
 
 @media screen and (min-width: 0px) {

@@ -21,12 +21,9 @@ let guessWhatNum = (randNum, tryNum)=>{
 let message ={
         guess: `🤔 Guess...`,
         correct: `🥳 Congratulations, Correct Number!`,
-        higher: `🔺 High Number`,
-        lower: `🔻 Low Number`,
+        higher: `🔺 Too High Number`,
+        lower: `🔻 Too Low Number`,
         loose: `👎 Sorry, attempts are over!`,
-        custom(msg){
-            return`${msg}`
-        }
 }
 //---------------- Elements ---------------||
 //btns
@@ -51,6 +48,7 @@ scoreBox.textContent = score
 
 checkBtn.addEventListener('click', ()=>{
     let guessNum = guessWhatNum(randNum, numberImput.value)
+
 
     if(score > 0) {
         switch(guessNum){
@@ -78,6 +76,7 @@ checkBtn.addEventListener('click', ()=>{
     }
 })
 
+// reset game
 againBtn.addEventListener('click', ()=>{
     guessBox.innerHTML = message.guess
     scoreBox.textContent = 20
